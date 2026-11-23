@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaitaran wale Bhaiya — Abhishek Kachchhawah | Photographer & Videographer, Rajasthan</title>
+  <meta name="description" content="Jaitaran wale Bhaiya — Freelance photography and videography by Abhishek Kachchhawah. Based in Jaitaran, Rajasthan. Specialising in portrait, event, and concept shoots." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --marigold: #E8830A;
+      --marigold-light: #F5A83A;
+      --sand: #F5E6C8;
+      --sand-dark: #E8D4A4;
+      --terracotta: #C2552A;
+      --charcoal: #1A1208;
+      --off-white: #FDF8F0;
+      --muted: #7A6545;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--off-white); font-family: 'Inter', sans-serif; color: var(--charcoal); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(26,18,8,0.93);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; color: var(--sand); letter-spacing: 2px;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--marigold); }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: rgba(245,230,200,0.6); text-decoration: none; font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--marigold); }
+    .nav-book {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      background: var(--marigold); color: var(--charcoal);
+      padding: 10px 20px; text-decoration: none; font-weight: 500;
+      transition: background 0.2s;
+    }
+    .nav-book:hover { background: var(--marigold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--charcoal);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(120px, 25vw, 280px);
+      font-weight: 700; color: rgba(232,131,10,0.05);
+      letter-spacing: -10px; pointer-events: none; user-select: none;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      white-space: nowrap;
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--marigold); margin-bottom: 20px; font-weight: 500;
+      position: relative;
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 700; color: var(--sand);
+      line-height: 1.05; letter-spacing: -1px;
+      margin-bottom: 8px; position: relative;
+    }
+    .hero-name em { color: var(--marigold); font-style: italic; }
+    .hero-studio {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(14px, 2vw, 20px);
+      color: var(--muted); letter-spacing: 8px; text-transform: uppercase;
+      margin-bottom: 28px; position: relative;
+    }
+    .hero-desc {
+      max-width: 480px; font-size: 15px; line-height: 1.85;
+      color: rgba(245,230,200,0.55); margin-bottom: 48px; font-weight: 300;
+      position: relative;
+    }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .btn-primary {
+      background: var(--marigold); color: var(--charcoal);
+      padding: 15px 36px; font-size: 12px; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none; font-weight: 500;
+      border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { background: var(--marigold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--sand);
+      padding: 14px 36px; font-size: 12px; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none; font-weight: 400;
+      border: 1px solid rgba(245,230,200,0.25); cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: border-color 0.2s, color 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: var(--marigold); color: var(--marigold); transform: translateY(-1px); }
+    /* ── SECTION BASE ── */
+    section { padding: 96px 48px; }
+    .section-inner { max-width: 1080px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--marigold); margin-bottom: 12px; font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px); font-weight: 600;
+      line-height: 1.1; color: var(--charcoal); margin-bottom: 16px;
+    }
+    .section-title em { font-style: italic; color: var(--terracotta); }
+
+    /* ── ABOUT ── */
+    .about { background: var(--off-white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: start; margin-top: 56px;
+    }
+    .about-text p {
+      font-size: 15px; line-height: 1.9; color: #4A3820;
+      margin-bottom: 18px; font-weight: 300;
+    }
+    .about-visual {
+      position: relative;
+      perspective: 1000px;
+      transition: transform 0.25s ease;
+    }
+    .about-visual:hover { transform: translateY(-4px); }
+    .about-visual::after {
+      content: '';
+      position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px;
+      border: 1px solid rgba(232,131,10,0.4); z-index: -1; pointer-events: none;
+    }
+    .about-card-inner {
+      display: grid;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .about-visual.is-flipped .about-card-inner { transform: rotateY(180deg); }
+    .about-card-face {
+      grid-area: 1 / 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+      padding: 40px;
+      background: var(--sand);
+      border: 1px solid var(--sand-dark);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .about-card-back {
+      transform: rotateY(180deg);
+      align-items: flex-start;
+    }
+    .about-card-back h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--charcoal);
+      margin: 18px 0 8px;
+    }
+    .about-card-back p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .about-card-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 24px;
+    }
+    .about-card-stat strong {
+      display: block;
+      font: 700 30px/1 'Playfair Display', serif;
+      color: var(--terracotta);
+    }
+    .about-card-stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+    .about-card-toggle {
+      align-self: flex-start;
+      margin-top: 24px;
+      padding: 9px 0;
+      border: 0;
+      border-bottom: 1px solid var(--terracotta);
+      background: transparent;
+      color: var(--terracotta);
+      font: 500 10px 'Inter', sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .about-card-toggle:hover { color: var(--charcoal); border-color: var(--charcoal); }
+    .about-card-toggle:focus-visible,
+    .meta-value a:focus-visible {
+      outline: 2px solid var(--terracotta);
+      outline-offset: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .about-visual,
+      .about-card-inner { transition: none; }
+      .about-visual:hover { transform: none; }
+    }
+    .about-meta {
+      padding-top: 24px;
+      border-top: 1px solid var(--sand-dark);
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .meta-item .meta-label {
+      font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 4px;
+    }
+    .meta-item .meta-value { font-size: 13px; color: var(--charcoal); }
+    .meta-value a { color: inherit; text-decoration-color: rgba(194,85,42,0.45); text-underline-offset: 3px; }
+    .meta-value a:hover { color: var(--terracotta); }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--charcoal); }
+    .gallery-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+    .gallery-tabs { display: flex; gap: 0; border-bottom: 1px solid rgba(245,230,200,0.12); }
+    .gallery-tab {
+      padding: 12px 28px; font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(245,230,200,0.4);
+      background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+      font-family: 'Inter', sans-serif; transition: color 0.2s, border-color 0.2s;
+    }
+    .gallery-tab.active { color: var(--marigold); border-bottom-color: var(--marigold); }
+    .gallery-panel { display: none; }
+    .gallery-panel.active { display: block; }
+
+    /* Photo grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 4px;
+    }
+    .photo-grid .item-tall { grid-row: span 2; }
+    .photo-item {
+      position: relative; overflow: hidden; background: #0E0A04;
+      aspect-ratio: 3/4; cursor: pointer;
+    }
+    .photo-item.item-tall { aspect-ratio: unset; }
+    .photo-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block; transition: transform 0.4s ease, opacity 0.3s;
+      opacity: 0.88;
+    }
+    .photo-item:hover img { transform: scale(1.04); opacity: 1; }
+    .photo-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,18,8,0.5) 0%, transparent 50%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .photo-item:hover .photo-overlay { opacity: 1; }
+
+    /* Swipeable portrait video carousel */
+    .video-grid {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 4px 2px 14px;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior-x: contain;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-color: var(--marigold) rgba(245,230,200,0.12);
+      scrollbar-width: thin;
+    }
+    .video-card {
+      flex: 0 0 clamp(220px, 25vw, 280px);
+      scroll-snap-align: start;
+      overflow: hidden;
+      background: #0E0A04;
+      border: 1px solid rgba(232,131,10,0.15);
+      transition: border-color 0.2s;
+    }
+    .video-card:hover { border-color: rgba(232,131,10,0.55); }
+    .video-card video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: contain;
+      background: #0E0A04;
+    }
+    .gallery-footer {
+      margin-top: 28px; text-align: center;
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+    .gallery-footer a { color: var(--marigold); text-decoration: none; }
+    .gallery-footer a:hover { text-decoration: underline; }
+
+    /* ── SERVICES ── */
+    .services {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(194,85,42,0.07) 0 4px, transparent 5px),
+        radial-gradient(circle at 80% 70%, rgba(232,131,10,0.08) 0 5px, transparent 6px),
+        var(--sand);
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 18px; margin-top: 48px;
+    }
+    .service-card {
+      position: relative;
+      min-height: 220px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      background: var(--off-white);
+      padding: 42px 20px 28px;
+      border: 1px solid rgba(194,85,42,0.32);
+      border-radius: 90px 90px 8px 8px;
+      box-shadow: inset 0 0 0 7px var(--off-white), inset 0 0 0 8px rgba(232,131,10,0.38);
+      transition: transform 0.25s, background 0.25s;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
+      width: 46px; height: 46px;
+      border: 1px solid var(--terracotta);
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .service-card::after {
+      content: '';
+      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+      width: 54px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--marigold), transparent);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      background: #FFF7E8;
+    }
+    .service-number {
+      position: relative; z-index: 1;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 500; letter-spacing: 2px;
+      color: var(--terracotta); line-height: 46px;
+      width: 46px; height: 46px;
+      margin: 0 0 24px;
+      background: var(--off-white);
+    }
+    .service-name {
+      font-family: 'Noto Serif Devanagari', 'Mangal', serif;
+      font-size: 22px; font-weight: 700; color: var(--charcoal);
+      line-height: 1.5;
+    }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--charcoal); }
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr minmax(320px, 420px);
+      gap: 72px; align-items: start; margin-top: 56px;
+    }
+    .contact-item {
+      display: flex; align-items: flex-start;
+      gap: 18px; margin-bottom: 28px;
+    }
+    .contact-icon {
+      width: 42px; height: 42px; border: 1px solid rgba(232,131,10,0.3);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-detail .c-label {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 5px;
+    }
+    .contact-detail .c-value { font-size: 14px; color: var(--sand); }
+    .contact-detail a { color: var(--sand); text-decoration: none; transition: color 0.2s; }
+    .contact-detail a:hover { color: var(--marigold); }
+    .social-row { display: flex; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
+    .social-btn {
+      padding: 10px 20px; border: 1px solid rgba(245,230,200,0.18);
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: rgba(245,230,200,0.5); text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .social-btn:hover { border-color: var(--marigold); color: var(--marigold); }
+
+    .book-panel {
+      background: rgba(245,230,200,0.04);
+      border: 1px solid rgba(232,131,10,0.2);
+      width: 100%; max-width: 420px;
+      justify-self: end;
+      padding: 28px 30px;
+    }
+    .book-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; color: var(--sand); margin-bottom: 8px;
+    }
+    .book-panel > p {
+      font-size: 13px; color: var(--muted); margin-bottom: 22px; line-height: 1.65; font-weight: 300;
+    }
+    .book-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+    .book-feature {
+      display: flex; align-items: center;
+      gap: 14px; font-size: 13px; color: rgba(245,230,200,0.65); font-weight: 300;
+    }
+    .feature-dot { width: 6px; height: 6px; background: var(--marigold); flex-shrink: 0; }
+    .whatsapp-btn {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; background: var(--marigold); color: var(--charcoal);
+      padding: 14px 20px; font-size: 12px; letter-spacing: 2px;
+      text-transform: uppercase; font-weight: 500; text-decoration: none;
+      width: 100%; font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+    }
+    .whatsapp-btn:hover { background: var(--marigold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0E0A04; padding: 36px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; color: var(--sand); letter-spacing: 2px; text-decoration: none;
+    }
+    .footer-logo span { color: var(--marigold); }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a {
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--marigold); }
+
+    /* ── FIXED CONTACT BUTTONS ── */
+    .floating-contact {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    .floating-contact a {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 0;
+      border: 1px solid rgba(245,230,200,0.18);
+      box-shadow: 0 8px 24px rgba(26,18,8,0.22);
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s, border-color 0.2s;
+    }
+    .floating-contact a:hover { transform: translateY(-2px); }
+    .floating-instagram {
+      background: var(--charcoal);
+      color: var(--sand);
+    }
+    .floating-instagram:hover { border-color: var(--marigold); color: var(--marigold); }
+    .floating-whatsapp {
+      background: var(--marigold);
+      color: var(--charcoal);
+      border-color: var(--marigold) !important;
+    }
+    .floating-whatsapp:hover { background: var(--marigold-light); }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(10,6,2,0.96);
+      align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 90vh; object-fit: contain;
+      box-shadow: 0 0 80px rgba(232,131,10,0.1);
+    }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 32px;
+      font-size: 28px; color: var(--sand); cursor: pointer;
+      background: none; border: none; font-family: 'Inter', sans-serif;
+      opacity: 0.6; transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: none; border: 1px solid rgba(245,230,200,0.2);
+      color: var(--sand); font-size: 20px; padding: 12px 18px;
+      cursor: pointer; transition: border-color 0.2s;
+    }
+    .lightbox-nav:hover { border-color: var(--marigold); color: var(--marigold); }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      section { padding: 72px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual::after { display: none; }
+      .about-card-face { min-height: 280px; padding: 30px 24px; }
+      .about-card-stats { gap: 24px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .photo-grid .item-tall { grid-row: span 1; aspect-ratio: 3/4; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 100px 24px 80px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .video-card { flex-basis: min(72vw, 280px); }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .book-panel { max-width: 100%; justify-self: stretch; padding: 24px 20px; }
+      .floating-contact {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+      }
+      .floating-contact a {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Jaitaran <span>wale Bhaiya</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="https://wa.me/917023889971?text=Hi%20Abhishek%2C%20I%20would%20like%20to%20book%20a%20shoot!" class="nav-book" target="_blank" rel="noopener">Book Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text" aria-hidden="true">MARWADI</div>
+    <p class="hero-eyebrow">Rajasthan · Photography & Videography</p>
+    <h1 class="hero-name">Abhishek<br><em>Kachchhawah</em></h1>
+    <p class="hero-studio">Jaitaran wale Bhaiya</p>
+    <p class="hero-desc">Transforming moments into timeless visual stories. Rooted in the colours and soul of Rajasthan.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Book a Shoot</a>
+      <a href="#gallery" class="btn-ghost">View Gallery</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">Capturing Rajasthan's <em>living heritage</em></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a photographer and videographer based in Jaitaran, Rajasthan, turning moments, ideas and stories into timeless visuals.</p>
+          <p>With 2+ years of experience and 200+ shoots, I specialize in pre-wedding and engagement shoots, event videography, product and business videos, and creative editing.</p>
+          <p>From capturing the moment to crafting the final frame, I bring stories to life through my lens.</p>
+        </div>
+        <div class="about-visual" id="aboutCard">
+          <div class="about-card-inner">
+            <div class="about-card-face about-card-front" id="aboutCardFront">
+              <div>
+                <p class="section-eyebrow">Behind the lens</p>
+                <h3>Stories, made to last.</h3>
+                <p>Every shoot is shaped around real people, meaningful moments, and the character of Rajasthan.</p>
+                <div class="about-card-stats">
+                  <div class="about-card-stat"><strong>2+</strong><span>Years shooting</span></div>
+                  <div class="about-card-stat"><strong>200+</strong><span>Shoots completed</span></div>
+                </div>
+              </div>
+              <button class="about-card-toggle" type="button" aria-controls="aboutCardBack" aria-pressed="false" onclick="toggleAboutCard()">View details</button>
+            </div>
+            <div class="about-card-face about-card-back" id="aboutCardBack" aria-hidden="true" inert>
+              <div class="about-meta">
+                <div class="meta-item">
+                  <div class="meta-label">Instagram</div>
+                  <div class="meta-value">
+                    <a href="https://www.instagram.com/jaitaranwale" target="_blank" rel="noopener">@jaitaranwale</a>
+                    ·
+                    <a href="https://www.instagram.com/jaitaranwalebhaiya" target="_blank" rel="noopener">@jaitaranwalebhaiya</a>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <div class="meta-label">Speciality</div>
+                  <div class="meta-value">Portrait · Event · Concept</div>
+                </div>
+                <div class="meta-item">
+                  <div class="meta-label">Based in</div>
+                  <div class="meta-value">Jaitaran, Rajasthan, India</div>
+                </div>
+              </div>
+              <button class="about-card-toggle" type="button" aria-controls="aboutCardFront" aria-pressed="true" onclick="toggleAboutCard()">Discover more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <div class="gallery-head">
+        <div>
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 class="section-title" style="color:var(--sand); margin-bottom:0;">The <em style="color:var(--marigold); font-style:italic;">work</em></h2>
+        </div>
+        <div class="gallery-tabs">
+          <button class="gallery-tab active" onclick="switchTab('videos', this)">Videography</button>
+          <button class="gallery-tab" onclick="switchTab('photos', this)">Photography</button>
+        </div>
+      </div>
+
+      <!-- PHOTOS -->
+      <div class="gallery-panel" id="panel-photos">
+        <div class="photo-grid" id="photoGrid">
+          <!-- photos injected by JS -->
+        </div>
+        <p class="gallery-footer" style="margin-top:28px;">
+          View full portfolio on
+          <a href="https://www.instagram.com/jaitaranwale" target="_blank" rel="noopener">@jaitaranwale</a>
+          &amp;
+          <a href="https://www.instagram.com/jaitaranwalebhaiya" target="_blank" rel="noopener">@jaitaranwalebhaiya</a>
+        </p>
+      </div>
+
+      <!-- VIDEOS -->
+      <div class="gallery-panel active" id="panel-videos">
+        <div class="video-grid">
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video1.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video02.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/Video2.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video3.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video4.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video5.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video6.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video7.mp4" type="video/mp4"></video></div>
+          <div class="video-card"><video controls preload="metadata" playsinline aria-label="Portfolio video"><source src="videography/video9.mp4" type="video/mp4"></video></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-eyebrow">Our Services</p>
+      <h2 class="section-title">Every moment, <em>in Rajasthan style</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3 class="service-name">Pre-Wedding & Engagement Shoots</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3 class="service-name">Event Videography & On-Day Editing</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3 class="service-name">Shop, Store & Business Videography</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3 class="service-name">Product Videography</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-number">05</div>
+          <h3 class="service-name">Shoot & Edit Packages</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <p class="section-eyebrow">Get in touch</p>
+      <h2 class="section-title" style="color:var(--sand);">Let's make <em style="color:var(--marigold); font-style:italic;">something</em></h2>
+      <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8830A" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 .02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div class="contact-detail">
+              <div class="c-label">Phone & WhatsApp</div>
+              <div class="c-value"><a href="tel:+917023889971">+91 7023889971</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8830A" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-detail">
+              <div class="c-label">Email</div>
+              <div class="c-value"><a href="mailto:akframes.co@gmail.com">akframes.co@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8830A" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail">
+              <div class="c-label">Location</div>
+              <div class="c-value">Jaitaran, Rajasthan, India</div>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://www.instagram.com/jaitaranwale" target="_blank" rel="noopener" class="social-btn">@jaitaranwale</a>
+            <a href="https://www.instagram.com/jaitaranwalebhaiya" target="_blank" rel="noopener" class="social-btn">@jaitaranwalebhaiya</a>
+          </div>
+        </div>
+        <div class="book-panel">
+          <h3>Book a shoot</h3>
+          <p>Send a WhatsApp message and I'll get back to you the same day to discuss your project, dates, and pricing.</p>
+          <div class="book-features">
+            <div class="book-feature"><div class="feature-dot"></div><span>Portrait & event photography</span></div>
+            <div class="book-feature"><div class="feature-dot"></div><span>Videography & cinematic reels</span></div>
+            <div class="book-feature"><div class="feature-dot"></div><span>Photo editing packages</span></div>
+            <div class="book-feature"><div class="feature-dot"></div><span>Concept & creative shoots</span></div>
+          </div>
+          <a href="https://wa.me/917023889971?text=Hi%20Abhishek%2C%20I%20would%20like%20to%20book%20a%20shoot!" target="_blank" rel="noopener" class="whatsapp-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#home" class="footer-logo">Jaitaran <span>wale Bhaiya</span></a>
+    <div class="footer-copy">© 2025 Jaitaran wale Bhaiya · Jaitaran, Rajasthan, India</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/jaitaranwale" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/917023889971" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:akframes.co@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <div class="floating-contact" aria-label="Quick contact">
+    <a class="floating-instagram" href="https://www.instagram.com/jaitaranwale" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="floating-whatsapp" href="https://wa.me/917023889971?text=Hi%20Abhishek%2C%20I%20would%20like%20to%20book%20a%20shoot!" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="changePhoto(-1)" aria-label="Previous photo">&#8592;</button>
+    <img id="lightboxImg" src="" alt="Portfolio photo" />
+    <button class="lightbox-nav lightbox-next" onclick="changePhoto(1)" aria-label="Next photo">&#8594;</button>
+  </div>
+
+  <script>
+    const photos = [
+      'photography/withmarwadi_14031228_230217032.jpg',
+      'photography/withmarwadi_14031228_230230109.jpg',
+      'photography/withmarwadi_14031228_230233164.jpg',
+      'photography/withmarwadi_14031228_230236363.jpg',
+      'photography/withmarwadi_14031228_230240010.jpg',
+      'photography/withmarwadi_14031228_230245283.jpg',
+      'photography/withmarwadi_14031228_230251417.jpg',
+      'photography/withmarwadi_14031228_230251441.jpg',
+      'photography/withmarwadi_14031228_230311661.jpg',
+      'photography/withmarwadi_14031228_230401825.jpg',
+      'photography/withmarwadi_14031228_230357705.jpg',
+      'photography/withmarwadi_14031228_230401796.jpg'
+    ];
+
+    const altTexts = [
+      'Portrait photography by Jaitaran wale Bhaiya',
+      'People photography by Abhishek Kachchhawah',
+      'Rajasthani portrait session',
+      'Creative photography Rajasthan',
+      'Portrait photography session',
+      'Jaitaran wale Bhaiya photography',
+      'Abhishek Kachchhawah portfolio',
+      'People photography Rajasthan',
+      'Studio photography Rajasthan',
+      'Event photography Rajasthan',
+      'Portrait shoot by Jaitaran wale Bhaiya',
+      'Photography portfolio Rajasthan'
+    ];
+
+    let currentPhoto = 0;
+
+    function buildGrid() {
+      const grid = document.getElementById('photoGrid');
+      photos.forEach((src, i) => {
+        const div = document.createElement('div');
+        div.className = 'photo-item' + (i === 0 ? ' item-tall' : '');
+        div.onclick = () => openLightbox(i);
+        div.setAttribute('tabindex', '0');
+        div.setAttribute('role', 'button');
+        div.setAttribute('aria-label', 'View ' + altTexts[i]);
+        div.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') openLightbox(i); };
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = altTexts[i];
+        img.loading = 'lazy';
+        img.onerror = function() { this.parentElement.style.display = 'none'; };
+
+        const overlay = document.createElement('div');
+        overlay.className = 'photo-overlay';
+
+        div.appendChild(img);
+        div.appendChild(overlay);
+        grid.appendChild(div);
+      });
+    }
+
+    function openLightbox(i) {
+      currentPhoto = i;
+      document.getElementById('lightboxImg').src = photos[i];
+      document.getElementById('lightboxImg').alt = altTexts[i];
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function changePhoto(dir) {
+      currentPhoto = (currentPhoto + dir + photos.length) % photos.length;
+      document.getElementById('lightboxImg').src = photos[currentPhoto];
+      document.getElementById('lightboxImg').alt = altTexts[currentPhoto];
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') changePhoto(-1);
+      if (e.key === 'ArrowRight') changePhoto(1);
+    });
+
+    function switchTab(panel, btn) {
+      document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.gallery-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + panel).classList.add('active');
+    }
+
+    const videos = document.querySelectorAll('#panel-videos video');
+    videos.forEach(video => {
+      video.addEventListener('play', () => {
+        videos.forEach(otherVideo => {
+          if (otherVideo !== video) otherVideo.pause();
+        });
+      });
+    });
+
+    function toggleAboutCard() {
+      const card = document.getElementById('aboutCard');
+      const front = card.querySelector('.about-card-front');
+      const back = document.getElementById('aboutCardBack');
+      const isFlipped = card.classList.toggle('is-flipped');
+
+      front.setAttribute('aria-hidden', isFlipped);
+      back.setAttribute('aria-hidden', !isFlipped);
+      front.inert = isFlipped;
+      back.inert = !isFlipped;
+      card.querySelectorAll('.about-card-toggle').forEach(toggle => {
+        toggle.setAttribute('aria-pressed', isFlipped);
+      });
+
+      const nextButton = card.querySelector(isFlipped
+        ? '.about-card-back .about-card-toggle'
+        : '.about-card-front .about-card-toggle');
+      nextButton.focus();
+    }
+
+    buildGrid();
+  </script>
+
+</body>
+</html>
